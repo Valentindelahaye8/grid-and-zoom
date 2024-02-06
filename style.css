@@ -1,0 +1,65 @@
+.box {
+    height:300px;
+    width:auto;
+    margin-inline: auto;    
+    border: 5px solid rgb(116, 111, 111);
+    border-style: inset;        
+    transition: transform ease-in-out 0.3s;
+    -webkit-transition:transform ease-in-out 0.3s; /* Safari and Chrome */
+    -moz-transition: transform ease-in-out 0.3s; /* Firefox */
+    -ms-transition: transform ease-in-out 0.3s;/* IE 9 */
+    -o-transition: transform ease-in-out 0.3s; /* Opera */
+    transition: transform ease-in-out 0.3s;
+   
+
+}
+.box p ,.box .flow {
+    display: grid;
+    transition: transform ease-in-out 0.3s;
+   
+}
+
+
+
+.box:hover, p,.box:hover~.flow {
+    transition-duration: ease-in-out 0.3s;
+}
+
+.box:hover{
+    
+    transform: scale(1.2);
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25); 
+}
+     .box:hover~ .flow{
+        padding-top: 30px;
+        transition: padding-top ease-in-out 0.3s;
+    }
+
+
+
+
+.grid{
+    display: grid;
+    gap: 7rem;
+    grid-template-columns: repeat(auto-fit,minmax(min(500px, 100%), 1fr));
+    padding-block:2rem;
+    width: min(95%,70rem);
+    margin-inline: auto;
+    justify-items: center;
+    align-items: center;
+
+
+    
+    }
+
+@media (min-width: 50em){
+    .autoflow{
+        grid-auto-flow:column;
+        grid-auto-columns:1fr;
+    }
+}
+
